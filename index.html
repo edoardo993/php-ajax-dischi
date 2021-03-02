@@ -21,6 +21,18 @@
         <!-- vue-root -->
         <div id="root">
 
+            <!-- select -->
+            <div class="select">
+                <h3>Filter By Genre</h3>
+                <select v-model="selected">
+                    <option disabled value="">----------</option>
+                    <option>All Genres</option>
+                    <!-- ciclo gli elementi dell'array 'genres' e stampo ogni elemento presente -->
+                    <option v-for="element in genres">{{element}}</option>
+                </select>
+            </div>
+            <!-- end select -->
+            
             <!-- cds container -->
             <div class="cds-container container">
 
