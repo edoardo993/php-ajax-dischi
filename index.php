@@ -21,7 +21,7 @@
         <div class="cds-container container">
 
             <?php
-                include_once 'database/database.php';
+                require_once 'database/database.php';
                 foreach($discs as $infoDisk){
             ?>
 

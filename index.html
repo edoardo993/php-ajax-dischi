@@ -21,18 +21,6 @@
         <!-- vue-root -->
         <div id="root">
 
-            <!-- select -->
-            <div class="select">
-                <h3>Filter By Genre</h3>
-                <select v-model="selected">
-                    <option disabled value="">----------</option>
-                    <option>All Genres</option>
-                    <!-- ciclo gli elementi dell'array 'genres' e stampo ogni elemento presente -->
-                    <option v-for="element in genres">{{element}}</option>
-                </select>
-            </div>
-            <!-- end select -->
-
             <!-- cds container -->
             <div class="cds-container container">
 
@@ -40,8 +28,7 @@
                 oppure se è impostata su 'all genres' oppure se è impostata su un
                 genere presente nella select -->
                 <div class="cd"
-                    v-for="element in albums"
-                    v-if=" element.genre===selected || selected==='' || selected==='All Genres' "
+                    v-for="element in discs"
                 >
                     <img :src="element.poster" alt="">
                     <h3>{{element.title}}</h3>

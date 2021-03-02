@@ -59,11 +59,18 @@ $discs = [
         'year' => '1994'
     ],
     [
+        'poster' => 'https://img.discogs.com/KOBsqQwKiNKH-q927oHMyVdDzSo=/fit-in/596x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6406665-1418464475-6120.jpeg.jpg',
+        'title' => 'Hard Wired',
+        'author' => 'Dave Weckl',
+        'genre' => 'Jazz',
+        'year' => '1994'
+    ],
+    [
         'poster' => 'https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg',
         'title' => 'Bad',
         'author' => 'Michael Jackson',
         'genre' => 'Pop',
         'year' => '1987'
     ]
-    
+
 ];
