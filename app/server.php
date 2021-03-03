@@ -3,9 +3,20 @@
 require_once __DIR__ . '/../database/database.php';
 
 $genreQuery = $_GET['genre'];
-if(empty($genreQuery)){
-    $discs = $discs;
+
+function filterByGenre($sourceArray, $genre) {
+    $res = [];
+    foreach($sourceArray as $album) {
+        if($album['genre'] === $genre){
+            array_push($res, $album);
+        }
+    }
+    return $res;
 }
+
+if(!empty($genreQuery)){
+    $discs = filterByGenre($discs, $genreQuery);
+} 
 
 header('Content-Type: application/json');
 echo json_encode($discs);
