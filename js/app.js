@@ -26,7 +26,20 @@ new Vue({
                     self.genres.push(element.genre)
                 }
             })
-        });
+        })
+    },
+    methods: {
+        genreSelection: function(){
+
+            // creo una costante con valore 'this'
+            // per poter richiamare i data nel mounted
+            const self=this;
+            axios.get('http://localhost:8888/php-ajax-dischi/app/server.php?genre=' + self.selected)
+            .then(function(resp){
+                self.discs=resp.data;
+                console.log(self.discs)
+            })
+        }
     }
 });
 Vue.config.devtools=true;
