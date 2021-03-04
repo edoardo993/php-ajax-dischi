@@ -13,17 +13,14 @@ new Vue({
     },
     mounted(){
 
-        // creo una costante con valore 'this'
-        // per poter richiamare i data nel mounted
-        const self=this;
         axios.get('http://localhost:8888/php-ajax-dischi/app/server.php')
-        .then(function(resp){
-            self.discs=resp.data;
-            console.log(self.discs);
+        .then((resp)=>{
+            this.discs=resp.data;
+            console.log(this.discs);
 
-            self.discs.forEach((element)=>{
-                if(!self.genres.includes(element.genre)){
-                    self.genres.push(element.genre)
+            this.discs.forEach((element)=>{
+                if(!this.genres.includes(element.genre)){
+                    this.genres.push(element.genre)
                 }
             })
         })
@@ -33,7 +30,7 @@ new Vue({
             axios.get('http://localhost:8888/php-ajax-dischi/app/server.php?genre=' + this.selected)
             .then((resp)=>{
                 this.discs=resp.data;
-                console.log(this.discs)
+                console.log(this.discs);
             })
         }
     }

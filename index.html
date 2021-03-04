@@ -26,7 +26,7 @@
                 <h3>Filter By Genre</h3>
                 <select v-model="selected" @change="genreSelection()">
                     <option disabled value="">----------</option>
-                    <option>All Genres</option>
+                    <option value="all genres">All Genres</option>
                     <!-- ciclo gli elementi dell'array 'genres' e stampo ogni elemento presente -->
                     <option v-for="element in genres"
                         :value="element">{{element}}
