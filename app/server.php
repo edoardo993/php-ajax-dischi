@@ -11,9 +11,6 @@ function filterByGenre($sourceArray, $genre) {
         if($album['genre'] === $genre){
             $res[] = $album;
         }
-        if($genre === 'All Genres'){
-            return $discs = $res;
-        }
     }
     return $res;
 }
@@ -24,13 +21,3 @@ if(!empty($genreQuery)){
 
 header('Content-Type: application/json');
 echo json_encode($discs);
-
-
-
-
-
-
-// window.location.protocol + '//' + window.location.hostname
-
-// var href = window.location.href;
-// var dir = href.substring(0, href.lastIndexOf('/')) + "/";
